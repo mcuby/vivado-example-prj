@@ -12,6 +12,7 @@ pipeline {
         }
         stage('Build') {
             steps {
+                sh 'source /opt/Xilinx/Vivado/2018.3/settings64.sh'
                 sh '/bin/bash -l scripts/build_fpga.sh'
             }
         }
